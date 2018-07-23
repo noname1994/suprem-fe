@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
  * Metarial
  */
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatExpansionModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatExpansionModule, MatMenuModule } from '@angular/material';
 /**
  * Routes
  */
@@ -15,13 +15,16 @@ import { Routing } from './routes/routing-app';
  */
 import { AppComponent } from './app.component';
 import { PagesComponent } from './pages/pages/pages.component';
+import { UserMenuComponent } from './component/user-menu/user-menu.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PagesComponent
+    PagesComponent,
+    UserMenuComponent,
+    UserMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -32,8 +35,10 @@ import { PagesComponent } from './pages/pages/pages.component';
     MatIconModule,
     MatListModule,
     MatExpansionModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatMenuModule
   ],
+  entryComponents: [UserMenuComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
